@@ -1,0 +1,13 @@
+.expo/
+.expo-shared/
+.vscode
+ios/
+android/
+LICENSE.md
+ISSUES.md
+.prettierignore
+tsconfig.json
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+pnpm-workspace.yaml

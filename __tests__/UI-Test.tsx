@@ -1,23 +1,11 @@
-/**
- * @format
- */
-
-import 'react-native';
 import React from 'react';
-import App from '../App';
+import {View} from 'react-native';
+import {create} from 'react-test-renderer';
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
-import {addNumbers} from '../src/mathUtils';
-import {track} from '../src/analyticsUtils';
+const ViewBox = () => <View style={{backgroundColor: 'white'}} />;
 
-jest.mock('../src/analyticsUtils');
+const tree = create(<ViewBox />);
 
-it('renders correctly', () => {
-  renderer.create(<App />);
-});
-
-it('add numbers', () => {
-  expect(addNumbers(1, 2)).toEqual(3);
-  expect(track).toBeCalledWith('addNumbers');
+test('snapshot[component]: ViewBox', () => {
+  expect(tree).toMatchSnapshot();
 });

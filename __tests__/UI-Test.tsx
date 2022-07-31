@@ -6,6 +6,6 @@ const ViewBox = () => <View style={{backgroundColor: 'white'}} />;
 
 const tree = create(<ViewBox />);
 
-test('snapshot[component]: ViewBox', () => {
+test('[UI-Test]: render ViewBox correctly', () => {
   expect(tree).toMatchSnapshot();
 });

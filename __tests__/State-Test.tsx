@@ -1,14 +1,14 @@
 import React from 'react';
 import {create, act} from 'react-test-renderer';
-import MyScreen from '../src/MyScreen';
+import StateScreen from '../src/StateScreen';
 
-const tree = create(<MyScreen />);
+const tree = create(<StateScreen />);
 
-test('snapshot[component]: MyScreen', () => {
+test('[State-Test]: render StateScreen correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-test('button press', () => {
+test('[State-Test]: text equal button pressed after button press', () => {
   // press button
   const button = tree.root.findByProps({testID: 'myButton'}).props;
   act(() => button.onPress());
@@ -17,7 +17,7 @@ test('button press', () => {
   expect(text.children).toBe('button pressed');
 });
 
-test('call timeout', () => {
+test('[State-Test]: text equal effect is called after call timeout', () => {
   // wait for useEffect
   act(() => {
     jest.runAllTimers();

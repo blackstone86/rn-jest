@@ -13,11 +13,11 @@ import {track} from '../src/analyticsUtils';
 
 jest.mock('../src/analyticsUtils');
 
-it('renders correctly', () => {
+it('[App-Test]: renders correctly', () => {
   renderer.create(<App />);
 });
 
-it('add numbers', () => {
+it('[App-Test]: add numbers', () => {
   expect(addNumbers(1, 2)).toEqual(3);
   expect(track).toBeCalledWith('addNumbers');
 });

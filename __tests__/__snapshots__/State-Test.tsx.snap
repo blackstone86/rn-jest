@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`snapshot[component]: MyScreen 1`] = `
+exports[`[State-Test]: render StateScreen correctly 1`] = `
 <View>
   <Text
     testID="myText"

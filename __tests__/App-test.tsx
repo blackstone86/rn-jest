@@ -8,10 +8,10 @@ import App from '../App';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
-import {addNumbers} from '../src/mathUtils';
-import {track} from '../src/analyticsUtils';
+import {addNumbers} from '../src/utils/mathUtils';
+import {track} from '../src/utils/analyticsUtils';
 
-jest.mock('../src/analyticsUtils');
+jest.mock('../src/utils/analyticsUtils');
 
 it('[App-Test]: renders correctly', () => {
   renderer.create(<App />);

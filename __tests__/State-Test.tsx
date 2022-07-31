@@ -1,6 +1,6 @@
 import React from 'react';
 import {create, act} from 'react-test-renderer';
-import StateScreen from '../src/StateScreen';
+import StateScreen from '../src/screens/StateScreen';
 
 const tree = create(<StateScreen />);
 

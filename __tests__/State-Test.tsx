@@ -9,6 +9,8 @@ test('snapshot[component]: MyScreen', () => {
 });
 
 test('button press', () => {
+  // wait for useEffect
+  jest.runAllTimers();
   // press button
   const button = tree.root.findByProps({testID: 'myButton'}).props;
   act(() => button.onPress());

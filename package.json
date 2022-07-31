@@ -49,6 +49,9 @@
       "jsx",
       "json",
       "node"
+    ],
+    "setupFiles": [
+      "<rootDir>/jestSetup.js"
     ]
   }
 }

@@ -9,12 +9,20 @@ test('snapshot[component]: MyScreen', () => {
 });
 
 test('button press', () => {
-  // wait for useEffect
-  jest.runAllTimers();
   // press button
   const button = tree.root.findByProps({testID: 'myButton'}).props;
   act(() => button.onPress());
   // text children equal "button pressed"
   const text = tree.root.findByProps({testID: 'myText'}).props;
   expect(text.children).toBe('button pressed');
+});
+
+test('call timeout', () => {
+  // wait for useEffect
+  act(() => {
+    jest.runAllTimers();
+  });
+
+  const text = tree.root.findByProps({testID: 'myText'}).props;
+  expect(text.children).toBe('effect is called');
 });

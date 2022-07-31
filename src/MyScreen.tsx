@@ -6,6 +6,9 @@ const MyScreen = () => {
 
   useEffect(() => {
     console.log('effect is called');
+    setTimeout(() => {
+      setStatus('effect is called');
+    }, 1000);
   });
 
   return (
